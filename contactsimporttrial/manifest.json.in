@@ -1,0 +1,15 @@
+{
+    "name": "contactsimporttrial.sft",
+    "description": "Trial to import contacts",
+    "architecture": "@CLICK_ARCH@",
+    "title": "Contacts Import Trial",
+    "hooks": {
+        "contactsimporttrial": {
+            "apparmor": "contactsimporttrial.apparmor",
+            "desktop":  "contactsimporttrial.desktop"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "sft <s@t.f>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}

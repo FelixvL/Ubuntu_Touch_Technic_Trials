@@ -1,0 +1,7 @@
+[Desktop Entry]
+_Name=Contacts Import Trial
+Exec=qmlscene %U qml/Main.qml --scaling
+Icon=assets/logo.svg
+Terminal=false
+Type=Application
+X-Lomiri-Touch=true
