@@ -37,7 +37,8 @@ Item {
     ContentPeerPicker {
         id: contentPeer
         anchors.fill: parent
-        contentType: ContentType.Contacts
+        contentType: ContentType.Contacts   // All Music Unknown Documents Pictures Videos Links EBooks Text 
+                                            // change if wish to limit for particular content type
         handler: ContentHandler.Source
         onPeerSelected: { activeTransfer = peer.request() }
         onCancelPressed: { dialogRoot.visible = false }
