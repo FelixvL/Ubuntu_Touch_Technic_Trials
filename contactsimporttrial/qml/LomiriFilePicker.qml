@@ -17,7 +17,7 @@ Item {
 
             for (var i = 0; i < importItems.length; i++) {
                 const url = importItems[i].url
-                console.log("URL: " + url)
+                console.log("URLxx: " + url)
                 if (fileUrls.indexOf(url) == -1) {
                     fileUrls.push(url)
                 }

@@ -21,6 +21,8 @@ import QtQuick.Layouts 1.3
 import Qt.labs.settings 1.0
 import QtContacts 5.0
 import Lomiri.Content 1.1
+import Qt.labs.folderlistmodel 2.8
+import Qt.labs.platform 1.0
 
 MainView {
     id: root
@@ -68,6 +70,27 @@ MainView {
 
             }
         }
+        FolderListModel{
+            id: folderlistmodel
+            folder: StandardPaths.writableLocation(StandardPaths.AppDataLocation) 
+        }
+        Connections {
+
+            target: ContentHub
+
+            onImportRequested: {
+                console.log("hoi")
+                var filePath = String(transfer.items[0].url)
+                print("Should import file", filePath)
+
+                File.copy(".",".")
+                // folderlistmodel.folder = filePath;
+
+                 // /home/phablet/
+                 // StandardPaths.writableLocation(StandardPaths.AppDataLocation) 
+                
+            }
+        } 
         
     }
 }
